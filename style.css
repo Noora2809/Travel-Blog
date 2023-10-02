@@ -1,0 +1,194 @@
+
+
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: 2px 3px 4px black;
+  }
+
+  .navbar-brand{
+    margin-right: 500px;
+    font-size: 25px;
+  }
+
+  p{
+    text-align: justify;
+  }
+
+.row .col-3 .card:hover {
+    background-color: #f0f0f0; 
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 2px 3px 3px 2px black;
+}
+.row .card:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    transform: rotate(360deg); /* Rotate the card slightly on hover */
+    transition: box-shadow 0.5s, transform 0.9s; /* Smooth transition effect */
+}
+
+.div2 .row .card:hover{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    transform: rotate(2deg); /* Rotate the card slightly on hover */
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.div3 .row .card {
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.div3 .row .card:hover {
+    transform: scale(1.05); /* Add a slight scale effect on hover */
+    filter: grayscale(100%); /* Convert the card to grayscale on hover */
+}
+ 
+
+    
+.row .card a:hover{
+    background-color: rgb(214, 208, 208);
+}
+a:hover{
+    background-color: rgb(3, 14, 14);
+}
+
+.row .col{
+    align-items: center;
+}
+
+.my-custom-row {
+    margin-left: -5px; /* Adjust the left margin to reduce the gap */
+    margin-right: -5px; /* Adjust the right margin to reduce the gap */
+}
+
+.my-custom-col {
+    padding-left: auto; /* Adjust the left padding to match the left margin */
+    padding-right: auto; /* Adjust the right padding to match the right margin */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item1 img:hover {
+    filter: blur(10px); /* Increase blur amount on hover */
+     transition: filter 0.10s;  /* Add a smooth transition  */
+
+}
+
+.carousel-inner button:hover{
+    color: white;
+    background-color: rgba(46, 32, 32, 0.715);
+    border: 2px solid rgba(46, 32, 32, 0.715);
+}
+a{
+    text-decoration: none;
+    font-size: x-large;
+}
+
+.btn:hover{
+    color: white;
+    background-color: rgb(100, 123, 120);
+    border: 2px solid rgba(46, 32, 32, 0.715);
+
+}
+
+.div4 .col-3 img{
+    border: 4px solid rgb(139, 133, 143);
+    box-shadow: 2px 3px 4px rgb(31, 29, 29);
+    border-radius: 25%;
+}
+
+a img{
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .navbar{
+        width: 965px;
+    }
+
+    .navbar-brand{
+        margin: 0;   
+    }
+
+    .carousel-inner{
+        width: 965px;
+        height: 700px;
+    }
+
+    .row .col-4{
+        font-size:large;
+        width: 700px;
+        margin-left: 110px;
+    }
+
+
+    .row h3{
+        margin-left: 150px;
+        margin-bottom: 40px;
+    }
+
+    .row .col-3{
+        margin-left: 20%;
+        margin-bottom: 40px;
+    }
+
+    h4{
+        margin: 0;
+    }
+
+    .row .col-4{
+
+        margin-left: 200px;
+        margin-bottom: 30px;    
+    }
+
+    .div4 h3{
+        margin-left: 190px;
+    }
+
+    footer{
+        width: 965px;
+    }
+
+
+} 
+
+ @media screen and (max-width: 400px) {
+    .navbar{
+        width: 700px;
+    }
+
+    .carousel-inner{
+        width: 700px;
+        height: 600px;
+    }
+
+    .row .col-4{
+        font-size:large;
+        width: 500px;
+        margin-left: 110px;
+    }
+
+    .row .col-3{
+        margin-left: 50%;
+        margin-right: 20%;
+        margin-bottom: 80px;
+    }
+
+    footer{
+        width: 700px;
+    }
+    
+} 
+
+
+
+
+

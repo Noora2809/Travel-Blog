@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GirlVentures</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=IM+Fell+English&family=Lora:ital,wght@1,500&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@500&family=IM+Fell+English&family=Lora:ital,wght@1,500&family=Raleway:wght@300&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="https://us.123rf.com/450wm/biletskiy/biletskiy2004/biletskiy200400080/145515076-travel-image-traveler-look-on-the-mountain-lake-travel-and-active-life-concept-adventure-and-travel.jpg?ver=6">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="font-family: 'Fira Mono', monospace;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient(to right, rgb(197, 152, 48),rgb(16, 47, 141))">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-5 text-white" href="#">GirlVentures <img src="data:image/jpeg;base64,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" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active me-2 text-white" aria-current="page" href="#about">Who am I?</a>
+              <a class="nav-link active  text-white" href="#dest">Destinations</a>
+              <a class="nav-link active text-white" href="#blog">Blog</a>
+              <a class="nav-link active ms-2 me-2 text-white" href="#photo">Photographs</a>
+              <a class="nav-link active  me-2 text-white" href="#post">Posts and Getaways</a>
+              <a class="nav-link active ms-2 me-2 text-white" href="#contact">Contact</a>
+
+
+            </div>
+          </div>
+        </div>
+      </nav> 
+      
+      <!-- banner -->
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" >
+          <div class="carousel-item active">
+            <img src="https://www.travelandleisure.com/thmb/YhlLO01i9ZVBivhoa61fRc6eTxg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/torres-del-paine-national-park-chile-MOSTBEAUTIFUL0921-4dfe4d2e67aa4f28ace7cf7cd21f4c8c.jpg" style="height: 683px;" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block ">
+              <h5>Wander often, wonder always.</h5>
+              <p>Explore. Dream. Discover.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-629376126-1568210521.png?crop=1xw:0.843328335832084xh;center,top" style="height: 683px;" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Wander often, wonder always.</h5>
+                <p>Explore. Dream. Discover.</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.pexels.com/photos/1450340/pexels-photo-1450340.jpeg?cs=srgb&dl=pexels-asad-photo-maldives-1450340.jpg&fm=jpg" style="height: 683px;" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Wander often, wonder always.</h5>
+                <p>Explore. Dream. Discover.</p>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+    <section id="about">
+      <div class="row mb-4">
+        <!-- row with columns 3 of size 4 -->
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h3 class="mt-5 mb-4 text-center">yo! i'm Jeffy</h3>
+            <p>I’m an American solo female traveler living out of a backpack since 2016, traveling to all kinds of places many tourists never consider. Cultures call to me, maps lie to me, and I’ll go anywhere so long as there are friendly faces and wild spaces. My goal is to inspire you to question stereotypes, travel responsibly… and see how girls can travel anywhere.</p>
+        </div>
+        <!-- row with columns 3 of size 4 -->
+        <div class="col-4"></div>
+        </div>
+      </div>
+    </section>
+      <!-- cards -->
+
+
+    <section id="dest"> 
+      <div class="row mt-5">
+        <h3 class="text-center mb-4"  style="text-decoration: underline;">Top Destinations</h3>
+        <div class="col-3">
+            <div class="card ms-auto" style="width: 17rem; ">
+                <img src="https://fullsuitcase.com/wp-content/uploads/2021/01/Best-things-to-do-in-London-top-sights-and-attractions.jpg.webp" style="height: 200px;" class="card-img-top" alt="...">
+                <div class="card-body" >
+                  <h5 class="card-title" style="text-decoration: underline;">London</h5>
+                  <p class="card-text">London, city, capital of the United Kingdom. It is among the oldest of the world’s great cities—its history spanning nearly two millennia—and one of the most cosmopolitan. By far Britain’s largest metropolis, it is also the country’s economic, transportation, and cultural centre.</p>
+                  <a href="#" class="btn btn-info">Know More</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-3">
+            <div class="card ms-auto" style="width: 17rem;">
+                <img src="https://www.spendlifetraveling.com/wp-content/uploads/2016/06/fun_facts_about_dubai_dubai_skyline.jpg" style="height: 200px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"  style="text-decoration: underline;">Dubai</h5>
+                  <p class="card-text">Dubai, also spelled Dubayy, city and capital of the emirate of Dubai, one of the wealthiest of the seven emirates that constitute the federation of the United Arab Emirates, which was created in 1971 following independence from Great Britain. One associates it with the daba.</p>
+                  <a href="#" class="btn btn-info">Know More</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-3">
+            <div class="card ms-auto" style="width: 17rem;">
+                <img src="https://i.natgeofe.com/k/5b396b5e-59e7-43a6-9448-708125549aa1/new-york-statue-of-liberty.jpg" style="height: 200px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"  style="text-decoration: underline;">New York</h5>
+                  <p class="card-text">New York, constituent state of the United States of America, one of the 13 original colonies and states. New York is bounded to the west and north by Lake Erie, the Canadian province of Ontario, Lake Ontario, and the Canadian province of Quebec; to the east by the New England.</p>
+                  <a href="#" class="btn btn-info text-dark">Know More</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-3">
+            <div class="card ms-auto me-auto" style="width: 17rem;">
+                <img src="https://www.nationsonline.org/gallery/Mauritius/Mauritius-Under-water-waterfall.jpg" style="height: 200px;" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title"  style="text-decoration: underline;">Mauritius</h5>
+                  <p class="card-text">Mauritius lies about 500 miles (800 km) east of Madagascar in the Indian Ocean. Its outlying territories are Rodrigues Island, situated about 340 miles (550 km) eastward, the Cargados Carajos Shoals, 250 miles (400 km) northeastward, and the Agalega Islands, 580 miles </p>
+                  <a href="#" class="btn btn-info">Know More</a>
+                </div>
+              </div>
+        </div>
+      </div>
+
+
+    </section>
+      <div class="container">
+        <h4 class="text-center mt-5"><b>AS SEEN IN:</b></h4>
+        <div class="row my-custom-row">
+            <div class="col my-custom-col">
+                <img src="https://lh5.googleusercontent.com/GfzmD_j4Irn4EqQUCa6cNNO7yQzgKETDScd0YYu8_hp_qyTOaVoKzBoiaWrivVUhvF9Drr7-Y-8JnkAPg4K9G0gvjL9tmi386ooWkzdUsOX7JeZjAED6Ip7l-Cg6x4TdtcAiYlm_" height="150px" alt="">
+            </div>
+            <div class="col my-custom-col">
+                <img src="https://media.vanityfair.com/photos/642c5631576ec658eae71c1d/16:9/w_1280,c_limit/VF-LOGO-BLACK.png" height="150px" width="200px" alt="">
+            </div>
+            <div class="col my-custom-col">
+                <img src="https://1000logos.net/wp-content/uploads/2021/05/Forbes-logo.png" height="150px" width="200px" alt="">
+            </div>
+            <div class="col my-custom-col">
+                <img src="https://www.logotypes101.com/logos/315/22AD403C0346734E02F36419A0857E22/popularmechanics.png" height="150px" width="300px" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- banner carousel2-->
+
+    <div class="carousel-inner">
+        <div class="carousel-item1 active">
+            <div style="position: relative;">
+                <img src="https://images.unsplash.com/photo-1567739665094-c24f043b8407?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D&w=1000&q=80" style="height: 683px;" class="d-block w-100" alt="...">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; font-size: xx-large; color: white; padding: 10px;">
+                    <b style="font-family: 'Satisfy', cursive; font-size: xxx-large;">Adventure like a pro</b>
+                    <p class="mt-5" style="font-size: medium;">Travel smarter, adventure better. Join our community of travelers and get our gear guides, travel tips and personal recommendations, entirely free.</p>
+                    <button type="button" class="btn btn-warning m-3 p-3">Subscribe Today →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <section id="blog">
+    <!-- cards -->
+    <div class="row" >
+        <h3 class="text-center mt-3 mb-5" style="text-decoration: underline;">Latest Blog Posts</h3>
+        <div class="col-4">
+            <div class="card" style="width: 18rem; height: 350px; margin-left: 300px;">
+                <img src="https://res.cloudinary.com/worldpackers/image/upload/c_fill,f_auto,q_auto,w_1024/v1/guides/article_cover/r0m9ryzqpxjsn2g0tm6q" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <a href="">Thailand Travel Guide</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card" style="width: 18rem; height: 200px;  height: 350px; margin-left: 200px;">
+                <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/12/Activities-In-Thailand-cover_16th-Dec.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="">Fun and interesting things to do in Thailand</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-4">
+            <div class="card" style="width: 18rem;  height: 350px; margin-left: 90px;">
+                <img src="https://lp-cms-production.imgix.net/2022-01/Young%20woman%20traveler%20with%20backpack%20traveling%20into%20beautiful%20pagoda%20in%20Wat%20Pra%20Kaew%20Witthaya%20Prasongsin%20GettyImages-1333211288%20rfc.jpg?auto=format&w=1440&h=810&fit=crop&q=75" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="">Recap: Sep 2023</a>
+                </div>
+            </div>
+        </div>
+        <div class= "d-grid gap-2 justify-content-md-center">
+            <button class="btn me-md-2 mt-3 mb-5" style=" background-color: rgb(225, 112, 173);color: white;" type="button">MORE FROM THE BLOG</button>
+          </div>
+    </div>
+  </section>
+
+  <section id="photo">
+    <div class="div4">
+      <h3 class="text-center mt-3 mb-5" style="text-decoration: underline;">RECENT PHOTOGRAPHS</h3>
+      <div class="row">
+        <div class="col-3">
+          <img src="https://3.bp.blogspot.com/-CauBU_EI4l8/VrmohB6jt0I/AAAAAAAAJf8/Lnbe9x07wG4/s640/Women%2BSolo%2BTravelers.jpg" class="ms-5 mb-4" height="250px" width="330px">
+        </div>
+        <div class="col-3">
+          <img src="https://assets.thehansindia.com/h-upload/2021/03/16/1037727-women.webp" class="ms-5 mb-4"  height="250px" width="330px" alt="">
+
+        </div>
+        <div class="col-3">
+          <img src="https://www.indianvisit.com/blog/wp-content/uploads/2020/01/intro.jpg" class="ms-5 mb-4" height="250px" width="330px" alt="">
+        </div>
+        <div class="col-3">
+          <img src="https://plus.unsplash.com/premium_photo-1664908256295-7408a2f2ecbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHN3YW5zfGVufDB8fDB8fHwx&w=1000&q=80" class="ms-5 mb-4 me-3" height="250px" width="330px" alt="">
+        </div>
+      </div>
+
+     
+        <div class="row">
+          <div class="col-3">
+            <img src="https://www.newsmobile.in/wp-content/uploads/2017/10/iStock_000039083542_Small.jpg" class="ms-5 mb-4" height="250px" width="330px">
+          </div>
+          <div class="col-3">
+            <img src="https://img.traveltriangle.com/blog/wp-content/uploads/2020/04/og-for-Solo-Female-Travel-Destinations-In-India_15th-Apr.jpg" class="ms-5 mb-4"  height="250px" width="330px" alt="">
+  
+          </div>
+          <div class="col-3">
+            <img src="https://static.toiimg.com/thumb/msid-92089121,width-748,height-499,resizemode=4,imgsize-139308/.jpg" class="ms-5 mb-4" height="250px" width="330px" alt="">
+          </div>
+          <div class="col-3">
+            <img src="https://imageio.forbes.com/specials-images/dam/imageserve/1171238184/0x0.jpg?format=jpg&width=1200" class="ms-5 mb-4 me-3" height="250px" width="330px" alt="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <img src="https://media.nomadicmatt.com/2022/vietnamcheap1.jpeg" class="ms-5 mb-4" height="250px" width="330px">
+          </div>
+          <div class="col-3">
+            <img src="https://www.studentuniverse.com/blog/wp-content/uploads/2014/04/Most-Beautiful-Places-to-Travel-Featured-Image.jpg" class="ms-5 mb-4"  height="250px" width="330px" alt="">
+  
+          </div>
+          <div class="col-3">
+            <img src="https://media.nomadicmatt.com/2022/cheaptravelnew1.jpeg" class="ms-5 mb-4" height="250px" width="330px" alt="">
+          </div>
+          <div class="col-3">
+            <img src="https://c.myholidays.com/blog/blog/content/images/2020/11/Places-To-Visit-In-India.jpg" class="ms-5 mb-4 me-3" height="250px" width="330px" alt="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-3">
+            <img src="https://media.timeout.com/images/105242512/image.jpg" class="ms-5 mb-4" height="250px" width="330px">
+          </div>
+          <div class="col-3">
+            <img src="https://www.tourmyindia.com/blog//wp-content/uploads/2022/10/Best-Places-to-Visit-in-Bhutan-Tourism.jpg" class="ms-5 mb-4"  height="250px" width="330px" alt="">
+  
+          </div>
+          <div class="col-3">
+            <img src="https://www.indianvisit.com/blog/wp-content/uploads/2020/01/intro.jpg" class="ms-5 mb-4" height="250px" width="330px" alt="">
+          </div>
+          <div class="col-3">
+            <img src="https://www.edreams.com/blog/wp-content/uploads/sites/3/2013/07/shutterstock_1293922393.jpg" class="ms-5 mb-4 me-3" height="250px" width="330px" alt="">
+          </div>
+        </div>
+
+  </div>
+</section>
+<section id="post">
+    <div class="div2">        
+      <div class="row">
+          <h3 class="text-center mt-3 mb-5" style="text-decoration: underline;">POPULAR POSTS</h3>
+          <div class="col-4">
+              <div class="card" style="width: 18rem; height: 350px; margin-left: 300px;">
+                  <img src="https://img.freepik.com/premium-photo/group-young-people-smiling-having-fun-taking-selfie-portrait-five-multiracial-happy-friends-looking-camera-funny-outdoor-activity-cheerful-students-away-from-home-lifetyle-concept_639864-216.jpg?w=2000" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <a href="" class="text-dark">How to Be Less of a Traveling Asshole in 2020</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col-4">
+              <div class="card" style="width: 18rem; height: 200px;  height: 350px; margin-left: 200px;">
+                  <img src="https://media.istockphoto.com/id/956864266/photo/happy-woman-backpacker-traveler-take-a-selfie-photo-on-amazing-ocean-coast.jpg?s=612x612&w=0&k=20&c=7KxehBKoyxSFMdFSxHakGQZsbYhyyYl705_Dq-MHvA4=" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <a href="" class="text-dark">Backpacking Southeast Asia vs. Backpacking Central America</a>
+                  </div>
+                </div>
+          </div>
+          <div class="col-4">
+              <div class="card" style="width: 18rem;  height: 350px; margin-left: 90px;">
+                  <img src="https://static01.nyt.com/images/2023/07/01/travel/22hours-paris-tjzf/22hours-paris-tjzf-superJumbo.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <a href="" class="text-dark">100 Travel Tips for Paris</a>
+                  </div>
+              </div>
+          </div>
+    </div>
+  </div>
+
+
+    <div class="div3">
+          <div class="row mb-5">
+              <h3 class="text-center mt-5 mb-5" style="text-decoration: underline;">BEST GETAWAYS</h3>
+              <div class="col-4">
+                  <div class="card" style="width: 18rem; height: 350px; margin-left: 300px;">
+                      <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201803/15Fir21-3.jpeg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <a href="" class="text-dark">Solo Female Travel in New Orleans: How to Stay Safe and Have Fun!</a>
+                      </div>
+                    </div>
+              </div>
+      
+              <div class="col-4">
+                  <div class="card" style="width: 18rem; height: 200px;  height: 350px; margin-left: 200px;">
+                      <img src="https://media.cntraveller.com/photos/611bed6df902cc2d167b42bc/16:9/w_2992,h_1683,c_limit/gettyimages-962826702.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <a href="" class="text-dark">14 Reasons Why I’m Smitten with Asheville, North Carolina</a>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-4">
+                  <div class="card" style="width: 18rem;  height: 350px; margin-left: 90px;">
+                      <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-800951070-1520802034.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <a href="" class="text-dark">How to Spend Three Days in Savannah</a>
+                      </div>
+                  </div>
+              </div>
+            </div>
+    </div>
+</section>  
+<section id="contact">
+<!-- Footer -->
+<footer class="text-center text-white mt-5" style="background-image: linear-gradient(to right, rgb(197, 152, 48),rgb(16, 47, 141))">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Subscribe Blog</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" placeholder="Write your mail id" />
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+   <!-- Copyright -->
+   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">GirlVentures.com</a>
+  </div>
+  <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</section>
+
+
+  </body>
+    </html>
