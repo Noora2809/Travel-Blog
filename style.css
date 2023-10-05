@@ -58,19 +58,17 @@ a:hover{
 .row .col{
     align-items: center;
 }
+.my-custom-col{
+    margin-left: 23%;
 
-.my-custom-row {
-    margin-left: -5px; /* Adjust the left margin to reduce the gap */
-    margin-right: -5px; /* Adjust the right margin to reduce the gap */
 }
 
-.my-custom-col {
-    padding-left: auto; /* Adjust the left padding to match the left margin */
-    padding-right: auto; /* Adjust the right padding to match the right margin */
-    margin-left: auto;
-    margin-right: auto;
-}
 
+
+#about .row .cust-col:hover{
+    border:2px solid black
+
+}
 .carousel-item1 img:hover {
     filter: blur(10px); /* Increase blur amount on hover */
      transition: filter 0.10s;  /* Add a smooth transition  */
